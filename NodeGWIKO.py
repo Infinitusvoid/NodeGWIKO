@@ -106,6 +106,9 @@ def load_image(image_path):
         print(f"Error: Failed to load image - {str(e)}")
         return None
 
+def replace_slash(input_string):
+    return input_string.replace("/", "\\")
+
 class NodeGWIKO:
     """
     A example node
@@ -256,7 +259,7 @@ class NodeGWIKO:
         
         
         #save_json(data, "C:/Users/Cosmos/Desktop/output/json_program_generated_from_ComfyUI.json")
-        path_to_json_program = str(folder_json_program) + "/json_program_generated_from_ComfyUI.json"
+        path_to_json_program = str(folder_json_program) + "\json_program_generated_from_ComfyUI.json"
         save_json(data, path_to_json_program)
         
         # Example usage:
@@ -264,8 +267,8 @@ class NodeGWIKO:
         args = ["-c", "print('Hello, world!')"]  # Example arguments
         start_process_with_args(command, args)
         
-        command = str(Path.cwd().joinpath("ComfyUI").joinpath("custom_nodes").joinpath("NodeGWIKO")) + "/GWIKO.exe"
-        args = ["ComfyUI2", path_to_json_program]
+        command = str(Path.cwd().joinpath("ComfyUI").joinpath("custom_nodes").joinpath("NodeGWIKO")) + "\GWIKO.exe"
+        args = ["ComfyUI2", replace_slash(path_to_json_program)]
         start_process_with_args(command, args)
 
         print("image if of type :")
