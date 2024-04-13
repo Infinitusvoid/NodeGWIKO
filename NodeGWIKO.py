@@ -198,6 +198,18 @@ class NodeGWIKO:
                  "float_uniform_data": ("FLOAT", {
                     "default": 1.0,
                     "display": "number"}),
+                "float_uniform_data_camera_x": ("FLOAT", {
+                    "default": 1.0,
+                    "display": "number"}),
+                "float_uniform_data_camera_y": ("FLOAT", {
+                    "default": 1.0,
+                    "display": "number"}),
+                "float_uniform_data_camera_z": ("FLOAT", {
+                    "default": 1.0,
+                    "display": "number"}),
+                "float_uniform_data_camera_fov": ("FLOAT", {
+                    "default": 1.0,
+                    "display": "number"}),
                 "float_field": ("FLOAT", {
                     "default": 1.0,
                     "min": 0.0,
@@ -227,7 +239,8 @@ class NodeGWIKO:
 
     CATEGORY = "NodeGWIKO"
 
-    def test(self, image, string_field, string_glsl_source, int_field, local_size_x, local_size_y, int_image_size_width, int_image_size_height, float_uniform_data, float_field, print_to_screen):
+    def test(self, image, string_field, string_glsl_source, int_field, local_size_x, local_size_y, int_image_size_width, int_image_size_height, float_uniform_data, float_field, print_to_screen
+    ,float_uniform_data_camera_x, float_uniform_data_camera_y, float_uniform_data_camera_z, float_uniform_data_camera_fov):
         if print_to_screen == "enable":
             print(f"""Your input contains:
                 string_field aka input text: {string_field}
