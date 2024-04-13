@@ -1,0 +1,18 @@
+{
+    "file_path_output": "C:\\Users\\Cosmos\\Downloads\\ComfyUI_windows_portable_nvidia_cu121_or_cpu\\ComfyUI_windows_portable\\ComfyUI\\custom_nodes\\NodeGWIKO\\output\\generated_image_qullo.png",
+    "image_size": {
+        "height": 919,
+        "width": 1024
+    },
+    "local_size_x": 16,
+    "local_size_y": 16,
+    "source_base64": "I3ZlcnNpb24gNDMwCgpsYXlvdXQgKGxvY2FsX3NpemVfeCA9IDE2LCBsb2NhbF9zaXplX3kgPSAxNikgaW47CmxheW91dCAoYmluZGluZyA9IDAsIHJnYmEzMmYpIHVuaWZvcm0gaW1hZ2UyRCBpbWdfb3V0cHV0OwpsYXlvdXQoc3RkMTQwLCBiaW5kaW5nID0gMCkgdW5pZm9ybSBVbmlmb3JtQmxvY2sgewoJZmxvYXQgdW5pZm9ybV9kYXRhOwp9IHVibzsKCnZvaWQgbWFpbigpCnsKCWl2ZWMyIHBpeGVsX2Nvb3JkcyA9IGl2ZWMyKGdsX0dsb2JhbEludm9jYXRpb25JRC54eSk7Cgl2ZWM0IGNvbG9yID0gdmVjNChwaXhlbF9jb29yZHMueCAvIDEwMjQuMCwgcGl4ZWxfY29vcmRzLnkgLyAxMDI0LjAsIDAuMCwgMS4wKTsKCWNvbG9yLmcgPSB1Ym8udW5pZm9ybV9kYXRhOyAvLyBFeGFtcGxlIG9mIHVzaW5nIHRoZSB1bmlmb3JtIGRhdGFcbiIKICAgICAgICBjb2xvci5iICo9IDAuNDsKCWltYWdlU3RvcmUoaW1nX291dHB1dCwgcGl4ZWxfY29vcmRzLCBjb2xvcik7Cn0=",
+    "variables": [
+        [
+            "uniform_data",
+            0.0
+        ]
+    ],
+    "version": 0.1,
+    "city": "New York"
+}
