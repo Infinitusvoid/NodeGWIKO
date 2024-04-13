@@ -195,29 +195,83 @@ class NodeGWIKO:
                     "step": 1, #Slider's step
                     "display": "number" # Cosmetic only: display as "number" or "slider"
                 }),
-                 "float_uniform_data": ("FLOAT", {
-                    "default": 1.0,
+                "float_uniform_t": ("FLOAT", {
+                    "default": 0.0,
                     "display": "number"}),
                 "float_uniform_camera_x": ("FLOAT", {
-                    "default": 1.0,
+                    "default": 0.0,
                     "display": "number"}),
                 "float_uniform_camera_y": ("FLOAT", {
-                    "default": 1.0,
+                    "default": 0.0,
                     "display": "number"}),
                 "float_uniform_camera_z": ("FLOAT", {
-                    "default": 1.0,
+                    "default": 0.0,
                     "display": "number"}),
                 "float_uniform_camera_fov": ("FLOAT", {
-                    "default": 1.0,
+                    "default": 0.0,
                     "display": "number"}),
                 "float_uniform_camera_rotation_x": ("FLOAT", {
-                    "default": 1.0,
+                    "default": 0.0,
                     "display": "number"}),
                 "float_uniform_camera_rotation_y": ("FLOAT", {
-                    "default": 1.0,
+                    "default": 0.0,
                     "display": "number"}),
                 "float_uniform_camera_rotation_z": ("FLOAT", {
-                    "default": 1.0,
+                    "default": 0.0,
+                    "display": "number"}),
+                "float_uniform_u0": ("FLOAT", {
+                    "default": 0.0,
+                    "display": "number"}),
+                "float_uniform_u1": ("FLOAT", {
+                    "default": 0.0,
+                    "display": "number"}),
+                "float_uniform_u2": ("FLOAT", {
+                    "default": 0.0,
+                    "display": "number"}),
+                "float_uniform_u3": ("FLOAT", {
+                    "default": 0.0,
+                    "display": "number"}),
+                "float_uniform_u4": ("FLOAT", {
+                    "default": 0.0,
+                    "display": "number"}),
+                "float_uniform_u5": ("FLOAT", {
+                    "default": 0.0,
+                    "display": "number"}),
+                "float_uniform_u6": ("FLOAT", {
+                    "default": 0.0,
+                    "display": "number"}),
+                "float_uniform_u7": ("FLOAT", {
+                    "default": 0.0,
+                    "display": "number"}),
+                "float_uniform_u8": ("FLOAT", {
+                    "default": 0.0,
+                    "display": "number"}),
+                "float_uniform_u9": ("FLOAT", {
+                    "default": 0.0,
+                    "display": "number"}),
+                "float_uniform_u10": ("FLOAT", {
+                    "default": 0.0,
+                    "display": "number"}),
+                "float_uniform_u11": ("FLOAT", {
+                    "default": 0.0,
+                    "display": "number"}),
+                "float_uniform_u12": ("FLOAT", {
+                    "default": 0.0,
+                    "display": "number"}),
+                "float_uniform_u13": ("FLOAT", {
+                    "default": 0.0,
+                    "display": "number"}),
+                "float_uniform_u14": ("FLOAT", {
+                    "default": 0.0,
+                    "display": "number"}),
+                "float_uniform_u15": ("FLOAT", {
+                    "default": 0.0,
+                    "display": "number"}),
+                "float_uniform_u16": ("FLOAT", {
+                    "default": 0.0,
+                    "display": "number"}),
+                "float_uniform_u17": ("FLOAT", {
+                    "default": 0.0,
                     "display": "number"}),
                 "float_field": ("FLOAT", {
                     "default": 1.0,
@@ -248,8 +302,10 @@ class NodeGWIKO:
 
     CATEGORY = "NodeGWIKO"
 
-    def test(self, image, string_field, string_glsl_source, int_field, local_size_x, local_size_y, int_image_size_width, int_image_size_height, float_uniform_data, float_field, print_to_screen
-    ,float_uniform_camera_x, float_uniform_camera_y, float_uniform_camera_z, float_uniform_camera_fov, float_uniform_camera_rotation_x, float_uniform_camera_rotation_y, float_uniform_camera_rotation_z):
+    def test(self, image, string_field, string_glsl_source, int_field, local_size_x, local_size_y, int_image_size_width, int_image_size_height, float_field, print_to_screen
+    , float_uniform_t, float_uniform_camera_x, float_uniform_camera_y, float_uniform_camera_z, float_uniform_camera_fov, float_uniform_camera_rotation_x, float_uniform_camera_rotation_y, float_uniform_camera_rotation_z
+    , float_uniform_u0, float_uniform_u1, float_uniform_u2, float_uniform_u3, float_uniform_u4, float_uniform_u5, float_uniform_u6, float_uniform_u7, float_uniform_u8, float_uniform_u9, float_uniform_u10, float_uniform_u11, float_uniform_u12, float_uniform_u13, float_uniform_u14, float_uniform_u15
+    , float_uniform_u16, float_uniform_u17):
         if print_to_screen == "enable":
             print(f"""Your input contains:
                 string_field aka input text: {string_field}
@@ -271,7 +327,7 @@ class NodeGWIKO:
             "local_size_x":local_size_x,
             "local_size_y":local_size_y,
             "source_base64":encode_to_base64(string_glsl_source),
-            "variables":[["uniform_data",float_uniform_data]],
+            "variables":[["uniform_data",float_uniform_u0]],
             "version":0.1,
             "city": "New York"
         }
