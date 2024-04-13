@@ -6,11 +6,11 @@
     },
     "local_size_x": 16,
     "local_size_y": 16,
-    "source_base64": "I3ZlcnNpb24gNDMwCgpsYXlvdXQgKGxvY2FsX3NpemVfeCA9IDE2LCBsb2NhbF9zaXplX3kgPSAxNikgaW47CmxheW91dCAoYmluZGluZyA9IDAsIHJnYmEzMmYpIHVuaWZvcm0gaW1hZ2UyRCBpbWdfb3V0cHV0OwpsYXlvdXQoc3RkMTQwLCBiaW5kaW5nID0gMCkgdW5pZm9ybSBVbmlmb3JtQmxvY2sgewoJZmxvYXQgdW5pZm9ybV9kYXRhOwp9IHVibzsKCnZvaWQgbWFpbigpCnsKCWl2ZWMyIHBpeGVsX2Nvb3JkcyA9IGl2ZWMyKGdsX0dsb2JhbEludm9jYXRpb25JRC54eSk7Cgl2ZWM0IGNvbG9yID0gdmVjNChwaXhlbF9jb29yZHMueCAvIDEwMjQuMCwgcGl4ZWxfY29vcmRzLnkgLyAxMDI0LjAsIDAuMCwgMS4wKTsKCWNvbG9yLmcgPSB1Ym8udW5pZm9ybV9kYXRhOyAvLyBFeGFtcGxlIG9mIHVzaW5nIHRoZSB1bmlmb3JtIGRhdGFcbiIKCWltYWdlU3RvcmUoaW1nX291dHB1dCwgcGl4ZWxfY29vcmRzLCBjb2xvcik7Cn0=",
+    "source_base64": "I3ZlcnNpb24gNDMwCgpsYXlvdXQgKGxvY2FsX3NpemVfeCA9IDE2LCBsb2NhbF9zaXplX3kgPSAxNikgaW47CmxheW91dCAoYmluZGluZyA9IDAsIHJnYmEzMmYpIHVuaWZvcm0gaW1hZ2UyRCBpbWdfb3V0cHV0OwpsYXlvdXQoc3RkMTQwLCBiaW5kaW5nID0gMCkgdW5pZm9ybSBVbmlmb3JtQmxvY2sgewoJZmxvYXQgdW5pZm9ybV9kYXRhOwp9IHVibzsKCnZvaWQgbWFpbigpCnsKCWl2ZWMyIHBpeGVsX2Nvb3JkcyA9IGl2ZWMyKGdsX0dsb2JhbEludm9jYXRpb25JRC54eSk7Cgl2ZWM0IGNvbG9yID0gdmVjNChwaXhlbF9jb29yZHMueCAvIDgwMC4wLCBwaXhlbF9jb29yZHMueSAvIDYwMC4wLCAwLjAsIDEuMCk7Cgljb2xvci5nID0gdWJvLnVuaWZvcm1fZGF0YTsgLy8gRXhhbXBsZSBvZiB1c2luZyB0aGUgdW5pZm9ybSBkYXRhXG4iCglpbWFnZVN0b3JlKGltZ19vdXRwdXQsIHBpeGVsX2Nvb3JkcywgY29sb3IpOwp9",
     "variables": [
         [
             "uniform_data",
-            1.0
+            105.0
         ]
     ],
     "version": 0.1,
