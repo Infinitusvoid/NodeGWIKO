@@ -159,4 +159,6 @@ class NodeGWIKO_4in4out:
     CATEGORY = "NodeGWIKO"
     
     def test(self, image_input_0, image_input_1, image_input_2, image_input_3, int_image_width, int_image_height, int_frame, int_local_size_x, int_local_size_y, print_to_screen, string_glsl_source):
-        pass
+        print("----")
+        print(image_input_0)
+        
