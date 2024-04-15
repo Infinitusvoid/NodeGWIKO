@@ -121,7 +121,7 @@ class NodeGWIKO_4in4out:
             },
         }
     
-    RETURN_TYPES = ("IMAGE",)
+    RETURN_TYPES = ("IMAGE", "IMAGE", "IMAGE", "IMAGE")
     #RETURN_NAMES = ("image_output_name",)
     
     FUNCTION = "test"
