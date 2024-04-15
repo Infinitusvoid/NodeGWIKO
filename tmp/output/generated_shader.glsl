@@ -4,7 +4,7 @@ layout (binding = 0, rgba32f) uniform image2D out0;
 layout (binding = 1, rgba32f) uniform image2D out1;
 layout (binding = 2, rgba32f) uniform image2D out2;
 layout (binding = 3, rgba32f) uniform image2D out3;
-int int_frame = 20;
+int int_frame = 21;
 
 void main()
 {
