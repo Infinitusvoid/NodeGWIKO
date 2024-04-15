@@ -8,6 +8,9 @@ import subprocess
 import json
 import base64
 
+import comfy.utils
+from torchvision import transforms
+
 def replace_string(main_string, target, replacement):
     """
     Replace all occurrences of 'target' in 'main_string' with 'replacement'.
@@ -95,6 +98,36 @@ def load_image(image_path):
 def replace_slash(input_string):
     return input_string.replace("/", "\\")
 
+def tensorToPngImage(image, filepath):
+    print("tensorToPngImage")
+    #print(image_input_0)
+    print(image.size())
+    assert image.dim() == 4 # "Tensor must be 4-dimensional"
+    assert image.size(0) == 1 # "First dimension must be 1"
+    #assert image_input_0.size(1) == 1024 # "Second dimension must be 1024"
+    #assert image_input_0.size(2) == 1024 # "Third dimension must be 1024"
+    #assert image_input_0.size(3) == 3 # "Fourth dimension must be 3"
+        
+    #save_tensor_as_png(image_input_0, "NodeGWIKO_pil_image_saved.png")
+    #save_tensor_as_image(image_input_0, "NodeGWIKO_pil_image_saved_torch_function.png")
+    
+    i = 255. * image.cpu().numpy()
+    #print(i)
+    #print("shape", i.shape)
+    
+    # Reshape the array
+    
+    reshaped_array = i.reshape(image.size(1), image.size(2), image.size(3))
+    #print("reshaped_array.shape", reshaped_array.shape)
+    
+    reshaped_array = np.uint8(reshaped_array)
+    
+    # Convert to PIL Image
+    image = Image.fromarray(reshaped_array)
+    
+    # Save as PNG
+    image.save(filepath)
+
 class NodeGWIKO_4in4out:
     def __init__(self):
         pass
@@ -159,6 +192,16 @@ class NodeGWIKO_4in4out:
     CATEGORY = "NodeGWIKO"
     
     def test(self, image_input_0, image_input_1, image_input_2, image_input_3, int_image_width, int_image_height, int_frame, int_local_size_x, int_local_size_y, print_to_screen, string_glsl_source):
-        print("----")
-        print(image_input_0)
         
+        tensorToPngImage(image_input_0, "out_0.png")
+        tensorToPngImage(image_input_1, "out_1.png")
+        tensorToPngImage(image_input_2, "out_2.png")
+        tensorToPngImage(image_input_3, "out_3.png")
+        
+        #img = Image.fromarray(np.clip(i, 0, 255).astype(np.uint8))
+        
+        #img.save("NodeGWIKO_ggsave.png")
+        #image.save('NodeGWIKO_pil_image_generated.png', format='PNG')
+        
+        #comfy.utils.save_torch_file(image_input_0, "NodeGWIKO_pil_image_saved_comfy.png")
+        print("image saved");
