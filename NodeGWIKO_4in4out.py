@@ -128,6 +128,13 @@ def tensorToPngImage(image, filepath):
     # Save as PNG
     image.save(filepath)
 
+def delete_file_if_exists(file_path):
+    if os.path.exists(file_path):  # Check if the file exists
+        os.remove(file_path)        # Delete the file
+        print(f"File {file_path} deleted successfully.")
+    else:
+        print(f"File {file_path} does not exist.")
+
 class NodeGWIKO_4in4out:
     def __init__(self):
         pass
@@ -203,11 +210,17 @@ class NodeGWIKO_4in4out:
         input_folder_path = Path.cwd().joinpath("ComfyUI").joinpath("custom_nodes").joinpath("NodeGWIKO").joinpath("tmp").joinpath("input")
         create_folder_if_not_exists(input_folder_path)
         
+        # delete things 
+
         # we place images into input
-        tensorToPngImage(image_input_0, str(input_folder_path) + "/out_0.png")
-        tensorToPngImage(image_input_1, str(input_folder_path) + "/out_1.png")
-        tensorToPngImage(image_input_2, str(input_folder_path) + "/out_2.png")
-        tensorToPngImage(image_input_3, str(input_folder_path) + "/out_3.png")
+        delete_file_if_exists(str(input_folder_path) + "/input_0.png")
+        tensorToPngImage(image_input_0, str(input_folder_path) + "/input_0.png")
+        delete_file_if_exists(str(input_folder_path) + "/input_1.png")
+        tensorToPngImage(image_input_1, str(input_folder_path) + "/input_1.png")
+        delete_file_if_exists(str(input_folder_path) + "/input_2.png")
+        tensorToPngImage(image_input_2, str(input_folder_path) + "/input_2.png")
+        delete_file_if_exists(str(input_folder_path) + "/input_3.png")
+        tensorToPngImage(image_input_3, str(input_folder_path) + "/input_3.png")
         
         
         #will have to be calculated based on root directory of project the paths should be absolute
@@ -217,7 +230,7 @@ class NodeGWIKO_4in4out:
         # we clear the output folder if generation fails we will know instead use previusly generated image
         
         #will have to be generated on call form torch_tensors
-        input_images_list = ["out_0.png", "out_1.png", "out_2.png", "out_3.png"]
+        input_images_list = ["input_0.png", "input_1.png", "input_2.png", "input_3.png"]
         
         number_of_output_images = 4 # this is constant per node as we can't have nodes with variable number of arguments ( well maybe with batches would go but kind don't like it )
         
@@ -241,6 +254,13 @@ class NodeGWIKO_4in4out:
         
         path_to_program = str(input_folder_path) + "/program.json"
         save_json(data, path_to_program)
+        
+        delete_file_if_exists(str(output_folder_path) + "\\out_0.png")
+        delete_file_if_exists(str(output_folder_path) + "\\out_1.png")
+        delete_file_if_exists(str(output_folder_path) + "\\out_2.png")
+        delete_file_if_exists(str(output_folder_path) + "\\out_3.png")
+        delete_file_if_exists(str(output_folder_path) + "\\generated_shader.glsl.png")
+        delete_file_if_exists(str(output_folder_path) + "\\log.txt")
         
         exe_file_name = "NodeGWIKO4.exe";
         command = str(Path.cwd().joinpath("ComfyUI").joinpath("custom_nodes").joinpath("NodeGWIKO")) + "\\" + exe_file_name
