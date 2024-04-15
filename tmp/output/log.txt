@@ -1,4 +1,4 @@
-width : 1023
+width : 1024
 height : 1024
 local_size_x : 16
 local_size_y : 16
