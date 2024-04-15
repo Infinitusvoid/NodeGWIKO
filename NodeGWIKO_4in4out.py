@@ -102,24 +102,23 @@ class NodeGWIKO_4in4out:
     def INPUT_TYPES(s):
         return {
             "required": {
-                "image": ("IMAGE",),
-                "int_field": ("INT", {
+                "image_input_0": ("IMAGE",),
+                "image_input_1": ("IMAGE",),
+                "image_input_2": ("IMAGE",),
+                "image_input_3": ("IMAGE",),
+                "int_frame": ("INT", {
                     "default": 0, 
                     "min": 0, #Minimum value
-                    "max": 4096, #Maximum value
-                    "step": 64, #Slider's step
+                    "step": 1, #Slider's step
                     "display": "number" # Cosmetic only: display as "number" or "slider"
                 }),
                 "print_to_screen": (["enable", "disable"],),
                 "string_glsl_source": ("STRING", {
                     "multiline": True, #True if you want the field to look like the one on the ClipTextEncode node
                     "dynamicPrompts": False,
-                    "default": ""
+                    "default": "void main{}"
                 }),
             },
-            "optimal": {
-                "image_optimal_0":("IMAGE",),
-            }
         }
     
     RETURN_TYPES = ("IMAGE",)
@@ -131,5 +130,5 @@ class NodeGWIKO_4in4out:
 
     CATEGORY = "NodeGWIKO"
     
-    def test(self, image, optimal, int_field, print_to_screen, string_glsl_source):
+    def test(self, image_input_0, image_input_1, image_input_2, image_input_3, int_frame, print_to_screen, string_glsl_source):
         pass
