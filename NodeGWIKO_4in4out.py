@@ -193,15 +193,58 @@ class NodeGWIKO_4in4out:
     
     def test(self, image_input_0, image_input_1, image_input_2, image_input_3, int_image_width, int_image_height, int_frame, int_local_size_x, int_local_size_y, print_to_screen, string_glsl_source):
         
-        tensorToPngImage(image_input_0, "out_0.png")
-        tensorToPngImage(image_input_1, "out_1.png")
-        tensorToPngImage(image_input_2, "out_2.png")
-        tensorToPngImage(image_input_3, "out_3.png")
+        # we make sure folders we will need exist
+        tmp_folder_path = Path.cwd().joinpath("ComfyUI").joinpath("custom_nodes").joinpath("NodeGWIKO").joinpath("tmp")
+        create_folder_if_not_exists(tmp_folder_path)
         
-        #img = Image.fromarray(np.clip(i, 0, 255).astype(np.uint8))
+        output_folder_path = Path.cwd().joinpath("ComfyUI").joinpath("custom_nodes").joinpath("NodeGWIKO").joinpath("tmp").joinpath("output")
+        create_folder_if_not_exists(output_folder_path)
         
-        #img.save("NodeGWIKO_ggsave.png")
-        #image.save('NodeGWIKO_pil_image_generated.png', format='PNG')
+        input_folder_path = Path.cwd().joinpath("ComfyUI").joinpath("custom_nodes").joinpath("NodeGWIKO").joinpath("tmp").joinpath("input")
+        create_folder_if_not_exists(input_folder_path)
         
-        #comfy.utils.save_torch_file(image_input_0, "NodeGWIKO_pil_image_saved_comfy.png")
+        # we place images into input
+        tensorToPngImage(image_input_0, str(input_folder_path) + "/out_0.png")
+        tensorToPngImage(image_input_1, str(input_folder_path) + "/out_1.png")
+        tensorToPngImage(image_input_2, str(input_folder_path) + "/out_2.png")
+        tensorToPngImage(image_input_3, str(input_folder_path) + "/out_3.png")
+        
+        
+        #will have to be calculated based on root directory of project the paths should be absolute
+        
+        
+        
+        # we clear the output folder if generation fails we will know instead use previusly generated image
+        
+        #will have to be generated on call form torch_tensors
+        input_images_list = ["out_0.png", "out_1.png", "out_2.png", "out_3.png"]
+        
+        number_of_output_images = 4 # this is constant per node as we can't have nodes with variable number of arguments ( well maybe with batches would go but kind don't like it )
+        
+        # the string source could be augumeted by build in variables like frame
+        string_source = "int int_frame = " +  str(int_frame) + ";\n" + string_glsl_source
+        string_source = encode_to_base64(string_source)
+        
+        
+        data = {
+            "type" : "NodeGWIKO",
+            "version" : "0.1",
+	        "width":int_image_width,
+            "height":int_image_height,
+            "local_size":{"x":int_local_size_x, "y":int_local_size_y},
+            "input_folder": str(input_folder_path),
+            "output_folder": str(output_folder_path),
+            "images_input": input_images_list,
+            "num_images_out":number_of_output_images,
+            "source" : string_source,
+        }
+        
+        path_to_program = str(input_folder_path) + "/program.json"
+        save_json(data, path_to_program)
+        
+        
+        
+        
+        
+        
         print("image saved");
