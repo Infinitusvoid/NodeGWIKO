@@ -232,8 +232,8 @@ class NodeGWIKO_4in4out:
 	        "width":int_image_width,
             "height":int_image_height,
             "local_size":{"x":int_local_size_x, "y":int_local_size_y},
-            "input_folder": str(input_folder_path),
-            "output_folder": str(output_folder_path),
+            "input_folder": str(input_folder_path) + "\\",
+            "output_folder": str(output_folder_path) + "\\",
             "images_input": input_images_list,
             "num_images_out":number_of_output_images,
             "source" : string_source,
@@ -242,9 +242,10 @@ class NodeGWIKO_4in4out:
         path_to_program = str(input_folder_path) + "/program.json"
         save_json(data, path_to_program)
         
-        
-        
-        
+        exe_file_name = "NodeGWIKO4.exe";
+        command = str(Path.cwd().joinpath("ComfyUI").joinpath("custom_nodes").joinpath("NodeGWIKO")) + "\\" + exe_file_name
+        args = ["ComfyUI", replace_slash(path_to_program)]
+        start_process_with_args(command, args)
         
         
         print("image saved");
