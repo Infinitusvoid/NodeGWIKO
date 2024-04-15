@@ -247,5 +247,12 @@ class NodeGWIKO_4in4out:
         args = ["ComfyUI", replace_slash(path_to_program)]
         start_process_with_args(command, args)
         
+        image_out_0 = pil2tensor(load_image(str(output_folder_path) + "\\out_0.png"))
+        image_out_1 = pil2tensor(load_image(str(output_folder_path) + "\\out_1.png"))
+        image_out_2 = pil2tensor(load_image(str(output_folder_path) + "\\out_2.png"))
+        image_out_3 = pil2tensor(load_image(str(output_folder_path) + "\\out_3.png"))
         
         print("image saved");
+        
+        return (image_out_0, image_out_1, image_out_2, image_out_3)
+        
