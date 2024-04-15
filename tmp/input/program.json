@@ -4,17 +4,17 @@
     "width": 1024,
     "height": 1024,
     "local_size": {
-        "x": 16,
-        "y": 16
+        "x": 32,
+        "y": 32
     },
     "input_folder": "C:\\Users\\Cosmos\\Downloads\\ComfyUI_windows_portable_nvidia_cu121_or_cpu\\ComfyUI_windows_portable\\ComfyUI\\custom_nodes\\NodeGWIKO\\tmp\\input\\",
     "output_folder": "C:\\Users\\Cosmos\\Downloads\\ComfyUI_windows_portable_nvidia_cu121_or_cpu\\ComfyUI_windows_portable\\ComfyUI\\custom_nodes\\NodeGWIKO\\tmp\\output\\",
     "images_input": [
-        "out_0.png",
-        "out_1.png",
-        "out_2.png",
-        "out_3.png"
+        "input_0.png",
+        "input_1.png",
+        "input_2.png",
+        "input_3.png"
     ],
     "num_images_out": 4,
-    "source": "aW50IGludF9mcmFtZSA9IDA7CnZvaWQgbWFpbigpCnsKIGl2ZWMyIHBpeGVsX2Nvb3JkcyA9IGl2ZWMyKGdsX0dsb2JhbEludm9jYXRpb25JRC54eSk7CiB2ZWM0IGNvbG9yID0gdmVjNChwaXhlbF9jb29yZHMueCAvIDEwMjQuMCwgcGl4ZWxfY29vcmRzLnkgLyAxMDI0LjAsIDAuMCwgMS4wKTsKIHZlYzQgY29sb3JfaW1hZ2VfMCA9IGltYWdlTG9hZChpbnB1dDAsIHBpeGVsX2Nvb3Jkcyk7CiB2ZWM0IGNvbG9yX2ltYWdlXzEgPSBpbWFnZUxvYWQoaW5wdXQxLCBwaXhlbF9jb29yZHMpOwogdmVjNCBjb2xvcl9pbWFnZV8yID0gaW1hZ2VMb2FkKGlucHV0MiwgcGl4ZWxfY29vcmRzKTsKIGltYWdlU3RvcmUob3V0MCwgcGl4ZWxfY29vcmRzLCBjb2xvcik7CiBpbWFnZVN0b3JlKG91dDEsIHBpeGVsX2Nvb3JkcywgY29sb3JfaW1hZ2VfMCk7CiBpbWFnZVN0b3JlKG91dDIsIHBpeGVsX2Nvb3JkcywgY29sb3JfaW1hZ2VfMSk7CiBpbWFnZVN0b3JlKG91dDMsIHBpeGVsX2Nvb3JkcywgY29sb3JfaW1hZ2VfMik7Cn0="
+    "source": "aW50IGludF9mcmFtZSA9IDQ7CnZvaWQgbWFpbigpCnsKIGl2ZWMyIHBpeGVsX2Nvb3JkcyA9IGl2ZWMyKGdsX0dsb2JhbEludm9jYXRpb25JRC54eSk7CiB2ZWM0IGNvbG9yID0gdmVjNChwaXhlbF9jb29yZHMueCAvIDEwMjQuMCwgcGl4ZWxfY29vcmRzLnkgLyAxMDI0LjAsIDAuMCwgMS4wKTsKIGNvbG9yLmcgPSAwLjUgKyAwLjIgKiBzaW4oY29sb3IuciAqIDEwMC4wKTsKIHZlYzQgY29sb3JfaW1hZ2VfMCA9IGltYWdlTG9hZChpbnB1dDAsIHBpeGVsX2Nvb3Jkcyk7CiB2ZWM0IGNvbG9yX2ltYWdlXzEgPSBpbWFnZUxvYWQoaW5wdXQxLCBwaXhlbF9jb29yZHMpOwogdmVjNCBjb2xvcl9pbWFnZV8yID0gaW1hZ2VMb2FkKGlucHV0MiwgcGl4ZWxfY29vcmRzKTsKIHZlYzQgY29sb3JfaW1hZ2VfMyA9IGltYWdlTG9hZChpbnB1dDMsIHBpeGVsX2Nvb3Jkcyk7CiAvLyBpbWFnZVN0b3JlKG91dDAsIHBpeGVsX2Nvb3JkcywgY29sb3IpOwogLy8gaW1hZ2VTdG9yZShvdXQxLCBwaXhlbF9jb29yZHMsIGNvbG9yX2ltYWdlXzApOwogLy8gaW1hZ2VTdG9yZShvdXQyLCBwaXhlbF9jb29yZHMsIGNvbG9yX2ltYWdlXzEpOwogLy8gaW1hZ2VTdG9yZShvdXQzLCBwaXhlbF9jb29yZHMsIGNvbG9yX2ltYWdlXzIpOwogaW1hZ2VTdG9yZShvdXQwLCBwaXhlbF9jb29yZHMsIGNvbG9yX2ltYWdlXzApOwogaW1hZ2VTdG9yZShvdXQxLCBwaXhlbF9jb29yZHMsIGNvbG9yX2ltYWdlXzEpOwogaW1hZ2VTdG9yZShvdXQyLCBwaXhlbF9jb29yZHMsIGNvbG9yX2ltYWdlXzIpOwogaW1hZ2VTdG9yZShvdXQzLCBwaXhlbF9jb29yZHMsIGNvbG9yX2ltYWdlXzMpOwp9"
 }
