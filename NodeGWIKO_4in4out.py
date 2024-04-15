@@ -106,9 +106,37 @@ class NodeGWIKO_4in4out:
                 "image_input_1": ("IMAGE",),
                 "image_input_2": ("IMAGE",),
                 "image_input_3": ("IMAGE",),
+                "int_image_width": ("INT", {
+                    "default": 1024,
+                    "max": 16384,
+                    "min": 0, #Minimum value
+                    "step": 1, #Slider's step
+                    "display": "number" # Cosmetic only: display as "number" or "slider"
+                }),
+                "int_image_height": ("INT", {
+                    "default": 1024,
+                    "max": 16384,
+                    "min": 0, #Minimum value
+                    "step": 1, #Slider's step
+                    "display": "number" # Cosmetic only: display as "number" or "slider"
+                }),
                 "int_frame": ("INT", {
                     "default": 0, 
                     "min": 0, #Minimum value
+                    "step": 1, #Slider's step
+                    "display": "number" # Cosmetic only: display as "number" or "slider"
+                }),
+                "int_local_size_x": ("INT", {
+                    "default": 16, 
+                    "min": 0, #Minimum value
+                    "max": 256, #Maximum value
+                    "step": 1, #Slider's step
+                    "display": "number" # Cosmetic only: display as "number" or "slider"
+                }),
+                "int_local_size_y": ("INT", {
+                    "default": 16, 
+                    "min": 0, #Minimum value
+                    "max": 256, #Maximum value
                     "step": 1, #Slider's step
                     "display": "number" # Cosmetic only: display as "number" or "slider"
                 }),
@@ -130,5 +158,5 @@ class NodeGWIKO_4in4out:
 
     CATEGORY = "NodeGWIKO"
     
-    def test(self, image_input_0, image_input_1, image_input_2, image_input_3, int_frame, print_to_screen, string_glsl_source):
+    def test(self, image_input_0, image_input_1, image_input_2, image_input_3, int_image_width, int_image_height, int_frame, int_local_size_x, int_local_size_y, print_to_screen, string_glsl_source):
         pass
