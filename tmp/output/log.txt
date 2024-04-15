@@ -2,31 +2,7 @@ width : 1024
 height : 1024
 local_size_x : 16
 local_size_y : 16
-number_input_images : 4
-image : 0 name : input_0.png filepath : C:\Users\Cosmos\Downloads\ComfyUI_windows_portable_nvidia_cu121_or_cpu\ComfyUI_windows_portable\ComfyUI\custom_nodes\NodeGWIKO\tmp\input\input_0.png
-image : 1 name : input_1.png filepath : C:\Users\Cosmos\Downloads\ComfyUI_windows_portable_nvidia_cu121_or_cpu\ComfyUI_windows_portable\ComfyUI\custom_nodes\NodeGWIKO\tmp\input\input_1.png
-image : 2 name : input_2.png filepath : C:\Users\Cosmos\Downloads\ComfyUI_windows_portable_nvidia_cu121_or_cpu\ComfyUI_windows_portable\ComfyUI\custom_nodes\NodeGWIKO\tmp\input\input_2.png
-image : 3 name : input_3.png filepath : C:\Users\Cosmos\Downloads\ComfyUI_windows_portable_nvidia_cu121_or_cpu\ComfyUI_windows_portable\ComfyUI\custom_nodes\NodeGWIKO\tmp\input\input_3.png
+number_input_images : 0
 number_output_images : 4
 output_folder : C:\Users\Cosmos\Downloads\ComfyUI_windows_portable_nvidia_cu121_or_cpu\ComfyUI_windows_portable\ComfyUI\custom_nodes\NodeGWIKO\tmp\output\
 input_folder : C:\Users\Cosmos\Downloads\ComfyUI_windows_portable_nvidia_cu121_or_cpu\ComfyUI_windows_portable\ComfyUI\custom_nodes\NodeGWIKO\tmp\input\
-loaded sucessfully image : C:\Users\Cosmos\Downloads\ComfyUI_windows_portable_nvidia_cu121_or_cpu\ComfyUI_windows_portable\ComfyUI\custom_nodes\NodeGWIKO\tmp\input\input_0.png
-image_width : 1024
-image_height : 1024
-image_numChannels : 3
-upload_with_converision_rgb_to_rgba_float
-loaded sucessfully image : C:\Users\Cosmos\Downloads\ComfyUI_windows_portable_nvidia_cu121_or_cpu\ComfyUI_windows_portable\ComfyUI\custom_nodes\NodeGWIKO\tmp\input\input_1.png
-image_width : 1024
-image_height : 1024
-image_numChannels : 3
-upload_with_converision_rgb_to_rgba_float
-loaded sucessfully image : C:\Users\Cosmos\Downloads\ComfyUI_windows_portable_nvidia_cu121_or_cpu\ComfyUI_windows_portable\ComfyUI\custom_nodes\NodeGWIKO\tmp\input\input_2.png
-image_width : 1024
-image_height : 1024
-image_numChannels : 3
-upload_with_converision_rgb_to_rgba_float
-loaded sucessfully image : C:\Users\Cosmos\Downloads\ComfyUI_windows_portable_nvidia_cu121_or_cpu\ComfyUI_windows_portable\ComfyUI\custom_nodes\NodeGWIKO\tmp\input\input_3.png
-image_width : 1024
-image_height : 1024
-image_numChannels : 3
-upload_with_converision_rgb_to_rgba_float
