@@ -135,6 +135,18 @@ def delete_file_if_exists(file_path):
     else:
         print(f"File {file_path} does not exist.")
 
+def read_string_from_file(file_path):
+    try:
+        with open(file_path, 'r') as file:
+            string_data = file.read()
+        return string_data
+    except FileNotFoundError:
+        print("File not found.")
+        return None
+    except Exception as e:
+        print("An error occurred:", e)
+        return None
+
 class NodeGWIKO_4in4out:
     def __init__(self):
         pass
@@ -180,7 +192,7 @@ class NodeGWIKO_4in4out:
                     "step": 1, #Slider's step
                     "display": "number" # Cosmetic only: display as "number" or "slider"
                 }),
-                "print_to_screen": (["enable", "disable"],),
+                "print_to_screen": (["enable", "disable"], ),
                 "string_glsl_source": ("STRING", {
                     "multiline": True, #True if you want the field to look like the one on the ClipTextEncode node
                     "dynamicPrompts": False,
@@ -272,7 +284,13 @@ class NodeGWIKO_4in4out:
         image_out_2 = pil2tensor(load_image(str(output_folder_path) + "\\out_2.png"))
         image_out_3 = pil2tensor(load_image(str(output_folder_path) + "\\out_3.png"))
         
-        print("image saved");
+        
+        
+        if print_to_screen == "enable":
+            string_of_glsl_code = read_string_from_file(str(output_folder_path) + "\\generated_shader.glsl")
+            print(string_of_glsl_code)
+            logging_txt = read_string_from_file(str(output_folder_path) + "\\log.txt")
+            print(logging_txt)
         
         return (image_out_0, image_out_1, image_out_2, image_out_3)
         

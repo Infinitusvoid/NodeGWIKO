@@ -1,7 +1,7 @@
-width : 1024
+width : 1023
 height : 1024
-local_size_x : 32
-local_size_y : 32
+local_size_x : 16
+local_size_y : 16
 number_input_images : 4
 image : 0 name : input_0.png filepath : C:\Users\Cosmos\Downloads\ComfyUI_windows_portable_nvidia_cu121_or_cpu\ComfyUI_windows_portable\ComfyUI\custom_nodes\NodeGWIKO\tmp\input\input_0.png
 image : 1 name : input_1.png filepath : C:\Users\Cosmos\Downloads\ComfyUI_windows_portable_nvidia_cu121_or_cpu\ComfyUI_windows_portable\ComfyUI\custom_nodes\NodeGWIKO\tmp\input\input_1.png
