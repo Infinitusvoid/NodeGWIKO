@@ -212,6 +212,7 @@ void main()
     
     RETURN_TYPES = ("IMAGE", "IMAGE", "IMAGE", "IMAGE")
     #RETURN_NAMES = ("image_output_name",)
+    RETURN_NAMES = ("out0", "out1", "out2", "out4")
     
     FUNCTION = "test"
     
