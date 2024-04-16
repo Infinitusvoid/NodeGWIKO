@@ -59,7 +59,7 @@ def save_json(data, file_path):
         json.dump(data, json_file, indent=4)
     print("JSON data saved to:", file_path)
 
-def start_process_with_args(command, args):
+def start_process_with_args(command, args, no_printing):
     try:
         # Start the process with the given command and arguments
         process = subprocess.Popen([command] + args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
@@ -71,11 +71,14 @@ def start_process_with_args(command, args):
         stdout_str = stdout.decode('utf-8')
         stderr_str = stderr.decode('utf-8')
         
-        # Check if there's any error output
-        if stderr_str:
-            print("Error occurred:", stderr_str)
+        if no_printing:
+            pass
         else:
-            print("Process output:", stdout_str)
+            # Check if there's any error output
+            if stderr_str:
+                print("Error occurred:", stderr_str)
+            else:
+                print("Process output:", stdout_str)
     
     except Exception as e:
         print("An error occurred:", str(e))
@@ -276,7 +279,7 @@ void main()
         exe_file_name = "NodeGWIKO4.exe";
         command = str(Path.cwd().joinpath("ComfyUI").joinpath("custom_nodes").joinpath("NodeGWIKO")) + "\\" + exe_file_name
         args = ["ComfyUI", replace_slash(path_to_program)]
-        start_process_with_args(command, args)
+        start_process_with_args(command, args, (print_to_screen == "disable"))
         
         image_out_0 = pil2tensor(load_image(str(output_folder_path) + "\\out_0.png"))
         
