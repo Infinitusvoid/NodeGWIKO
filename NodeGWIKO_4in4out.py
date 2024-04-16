@@ -168,10 +168,10 @@ void main()
 
         return {
             "required": {
-                "image_input_0": ("IMAGE",),
-                "image_input_1": ("IMAGE",),
-                "image_input_2": ("IMAGE",),
-                "image_input_3": ("IMAGE",),
+                "input0": ("IMAGE",),
+                "input1": ("IMAGE",),
+                "input2": ("IMAGE",),
+                "input3": ("IMAGE",),
                 "int_image_width": ("INT", {
                     "default": 1024,
                     "max": 16384,
@@ -226,7 +226,7 @@ void main()
 
     CATEGORY = "NodeGWIKO"
     
-    def test(self, image_input_0, image_input_1, image_input_2, image_input_3, int_image_width, int_image_height, int_frame, int_local_size_x, int_local_size_y, print_to_screen, string_glsl_source):
+    def test(self, input0, input1, input2, input3, int_image_width, int_image_height, int_frame, int_local_size_x, int_local_size_y, print_to_screen, string_glsl_source):
         
         # we make sure folders we will need exist
         tmp_folder_path = Path.cwd().joinpath("ComfyUI").joinpath("custom_nodes").joinpath("NodeGWIKO").joinpath("tmp")
@@ -242,13 +242,13 @@ void main()
 
         # we place images into input
         delete_file_if_exists(str(input_folder_path) + "/input_0.png")
-        tensorToPngImage(image_input_0, str(input_folder_path) + "/input_0.png")
+        tensorToPngImage(input0, str(input_folder_path) + "/input_0.png")
         delete_file_if_exists(str(input_folder_path) + "/input_1.png")
-        tensorToPngImage(image_input_1, str(input_folder_path) + "/input_1.png")
+        tensorToPngImage(input1, str(input_folder_path) + "/input_1.png")
         delete_file_if_exists(str(input_folder_path) + "/input_2.png")
-        tensorToPngImage(image_input_2, str(input_folder_path) + "/input_2.png")
+        tensorToPngImage(input2, str(input_folder_path) + "/input_2.png")
         delete_file_if_exists(str(input_folder_path) + "/input_3.png")
-        tensorToPngImage(image_input_3, str(input_folder_path) + "/input_3.png")
+        tensorToPngImage(input3, str(input_folder_path) + "/input_3.png")
         
         
         #will have to be calculated based on root directory of project the paths should be absolute
