@@ -7,6 +7,10 @@ from .NodeGWIKO_GLSL_IntVariable import NodeGWIKO_GLSL_IntVariable
 from .NodeGWIKO_GLSL_FloatVariable import NodeGWIKO_GLSL_FloatVariable
 from .NodeGWIKO_GLSL_Vec2Variable import NodeGWIKO_GLSL_Vec2Variable
 from .NodeGWIKO_GLSL_Vec3Variable import NodeGWIKO_GLSL_Vec3Variable
+from .NodeGWIKO_GLSL_Vec4Variable import NodeGWIKO_GLSL_Vec4Variable
+from .NodeGWIKO_GLSL_IVec2Variable import NodeGWIKO_GLSL_IVec2Variable
+from .NodeGWIKO_GLSL_IVec3Variable import NodeGWIKO_GLSL_IVec3Variable
+from .NodeGWIKO_GLSL_IVec4Variable import NodeGWIKO_GLSL_IVec4Variable
 
 # A dictionary that contains all nodes you want to export with their names
 # NOTE: names should be globally unique
@@ -19,7 +23,11 @@ NODE_CLASS_MAPPINGS = {
     "NodeGWIKO_GLSL_IntVariable":NodeGWIKO_GLSL_IntVariable,
     "NodeGWIKO_GLSL_FloatVariable":NodeGWIKO_GLSL_FloatVariable,
     "NodeGWIKO_GLSL_Vec2Variable":NodeGWIKO_GLSL_Vec2Variable,
-    "NodeGWIKO_GLSL_Vec3Variable":NodeGWIKO_GLSL_Vec3Variable
+    "NodeGWIKO_GLSL_Vec3Variable":NodeGWIKO_GLSL_Vec3Variable,
+    "NodeGWIKO_GLSL_Vec4Variable":NodeGWIKO_GLSL_Vec4Variable,
+    "NodeGWIKO_GLSL_IVec2Variable":NodeGWIKO_GLSL_IVec2Variable,
+    "NodeGWIKO_GLSL_IVec3Variable":NodeGWIKO_GLSL_IVec3Variable,
+    "NodeGWIKO_GLSL_IVec4Variable":NodeGWIKO_GLSL_IVec4Variable
 }
 
 # A dictionary that contains the friendly/humanly readable titles for the nodes
@@ -32,5 +40,9 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "NodeGWIKO_GLSL_IntVariable" : "NodeGWIKO GLSL IntVariable",
     "NodeGWIKO_GLSL_FloatVariable" : "NodeGWIKO GLSL FloatVariable",
     "NodeGWIKO_GLSL_Vec2Variable" : "NodeGWIKO GLSL Vec2Variable",
-    "NodeGWIKO_GLSL_Vec3Variable" : "NodeGWIKO GLSL Vec3Variable"
+    "NodeGWIKO_GLSL_Vec3Variable" : "NodeGWIKO GLSL Vec3Variable",
+    "NodeGWIKO_GLSL_Vec4Variable" : "NodeGWIKO GLSL Vec4Variable",
+    "NodeGWIKO_GLSL_IVec2Variable" : "NodeGWIKO GLSL IVec2Variable",
+    "NodeGWIKO_GLSL_IVec3Variable" : "NodeGWIKO GLSL IVec3Variable",
+    "NodeGWIKO_GLSL_IVec4Variable" : "NodeGWIKO GLSL IVec4Variable"
 }
