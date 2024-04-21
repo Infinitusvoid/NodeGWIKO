@@ -5,6 +5,8 @@ from .NodeGWIKO_0in1out import NodeGWIKO_0in1out
 from .NodeGWIKO_GLSL_TextString import NodeGWIKO_GLSL_TextString
 from .NodeGWIKO_GLSL_IntVariable import NodeGWIKO_GLSL_IntVariable
 from .NodeGWIKO_GLSL_FloatVariable import NodeGWIKO_GLSL_FloatVariable
+from .NodeGWIKO_GLSL_Vec2Variable import NodeGWIKO_GLSL_Vec2Variable
+from .NodeGWIKO_GLSL_Vec3Variable import NodeGWIKO_GLSL_Vec3Variable
 
 # A dictionary that contains all nodes you want to export with their names
 # NOTE: names should be globally unique
@@ -15,7 +17,9 @@ NODE_CLASS_MAPPINGS = {
     "NodeGWIKO_0in1out":NodeGWIKO_0in1out,
     "NodeGWIKO_GLSL_TextString":NodeGWIKO_GLSL_TextString,
     "NodeGWIKO_GLSL_IntVariable":NodeGWIKO_GLSL_IntVariable,
-    "NodeGWIKO_GLSL_FloatVariable":NodeGWIKO_GLSL_FloatVariable
+    "NodeGWIKO_GLSL_FloatVariable":NodeGWIKO_GLSL_FloatVariable,
+    "NodeGWIKO_GLSL_Vec2Variable":NodeGWIKO_GLSL_Vec2Variable,
+    "NodeGWIKO_GLSL_Vec3Variable":NodeGWIKO_GLSL_Vec3Variable
 }
 
 # A dictionary that contains the friendly/humanly readable titles for the nodes
@@ -26,5 +30,7 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "NodeGWIKO_0in1out" : "NodeGWIKO_0in1out 0 in 1 out",
     "NodeGWIKO_GLSL_TextString": "NodeGWIKO GLSL TextString",
     "NodeGWIKO_GLSL_IntVariable" : "NodeGWIKO GLSL IntVariable",
-    "NodeGWIKO_GLSL_FloatVariable" : "NodeGWIKO GLSL FloatVariable"
+    "NodeGWIKO_GLSL_FloatVariable" : "NodeGWIKO GLSL FloatVariable",
+    "NodeGWIKO_GLSL_Vec2Variable" : "NodeGWIKO GLSL Vec2Variable",
+    "NodeGWIKO_GLSL_Vec3Variable" : "NodeGWIKO GLSL Vec3Variable"
 }
