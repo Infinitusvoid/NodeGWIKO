@@ -3,6 +3,9 @@ import base64
 import importlib
 import subprocess
 import json
+import numpy as np
+import torch
+from PIL import Image, ImageDraw, ImageFont
 
 def print_yea():
     print("yea")
