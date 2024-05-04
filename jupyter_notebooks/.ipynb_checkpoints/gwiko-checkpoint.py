@@ -95,28 +95,31 @@ def save_json(data, file_path):
 
 
 def start_process_with_args(command, args, no_printing):
+    print("A0")
     try:
         # Start the process with the given command and arguments
         process = subprocess.Popen([command] + args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         
         # Wait for the process to finish and get its output
         stdout, stderr = process.communicate()
-        
+        print("A1")
         # Decode output bytes to strings
         stdout_str = stdout.decode('utf-8')
         stderr_str = stderr.decode('utf-8')
-        
+
+        print("A2")
         if no_printing:
+            print("A2.0")
             pass
         else:
             # Check if there's any error output
             if stderr_str:
-                print("Error occurred:", stderr_str)
+                return ("Error occurred:", stderr_str)
             else:
-                print("Process output:", stdout_str)
-    
+                return ("Process output:", stdout_str)
+                print("A2.1")
     except Exception as e:
-        print("An error occurred:", str(e))
+        return ("An error occurred:", str(e))
 
 
 def pil2tensor(image):
@@ -152,5 +155,3 @@ def tensorToPngImage(image, filepath):
     
     # Save as PNG
     image.save(filepath)
-
-
