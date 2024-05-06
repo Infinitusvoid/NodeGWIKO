@@ -424,7 +424,7 @@ void main()
    vec2 uv = pixel_coords.xy / iResolution.xy;
     uv.x *= iResolution.x / iResolution.y;  // Compensate for screen ratio
 
- float iTime = 1.0;
+    float iTime = float(int_frame) / 60.0;
 
     float value_t =  (parameter_t_offset * 1000.0) + parameter_t_amplitude * 1000.0 * sin(iTime * 0.0024 * parameter_t_frequency);
     
