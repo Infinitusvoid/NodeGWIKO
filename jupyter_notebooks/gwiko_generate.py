@@ -77,9 +77,9 @@ class Generate():
         image_out_0_pil_image = image_out_0_pil_image.convert("RGB")
         image_out_0 = gwiko.pil2tensor(image_out_0_pil_image)
         if print_to_screen:
-            string_of_glsl_code = gwiko.read_string_from_file(str(output_folder_path) + "\\generated_shader.glsl")
+            string_of_glsl_code = gwiko.read_string_from_file(str(self.folders.output_folder) + "\\generated_shader.glsl")
             print(string_of_glsl_code)
-            logging_txt = gwiko.read_string_from_file(str(output_folder_path) + "\\log.txt")
+            logging_txt = gwiko.read_string_from_file(str(self.folders.output_folder) + "\\log.txt")
             print(logging_txt)
             print(image_out_0)
             print(response)
