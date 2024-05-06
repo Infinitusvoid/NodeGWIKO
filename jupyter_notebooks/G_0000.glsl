@@ -353,7 +353,7 @@ vec4 option_7(vec4 v0, vec4 v1, float u, float v, float t)
 }
 
 
-#define USE_FUNCTION option_7
+
 
 vec4 f_texture_2x(vec3 uvt)
 {
