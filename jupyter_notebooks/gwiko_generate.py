@@ -43,7 +43,7 @@ class Generate():
     def set_size(self, width, height):
         self.int_image_width = width
         self.int_image_height = height
-    def generate(self, source, print_to_screen = True):
+    def generate(self, source, print_to_screen = True, display_the_image = True):
         source = gwiko.encode_to_base64(source)
         
         data = {
@@ -73,8 +73,8 @@ class Generate():
         args = ["ComfyUI", gwiko.replace_slash(path_to_program)]
         response = gwiko.start_process_with_args(command, args)
         
-        image_out_0_pil_image = gwiko.load_image(str(self.folders.output_folder) + "\\out_0.png")
-        image_out_0_pil_image = image_out_0_pil_image.convert("RGB")
+        image_rgba = gwiko.load_image(str(self.folders.output_folder) + "\\out_0.png")
+        image_out_0_pil_image = image_rgba.convert("RGB")
         image_out_0 = gwiko.pil2tensor(image_out_0_pil_image)
         if print_to_screen:
             string_of_glsl_code = gwiko.read_string_from_file(str(self.folders.output_folder) + "\\generated_shader.glsl")
@@ -83,4 +83,6 @@ class Generate():
             print(logging_txt)
             print(image_out_0)
             print(response)
-        display(image_out_0_pil_image)
+        if display_the_image:
+            display(image_out_0_pil_image)
+        return image_rgba
