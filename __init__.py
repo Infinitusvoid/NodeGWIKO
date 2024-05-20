@@ -11,6 +11,7 @@ from .NodeGWIKO_GLSL_Vec4Variable import NodeGWIKO_GLSL_Vec4Variable
 from .NodeGWIKO_GLSL_IVec2Variable import NodeGWIKO_GLSL_IVec2Variable
 from .NodeGWIKO_GLSL_IVec3Variable import NodeGWIKO_GLSL_IVec3Variable
 from .NodeGWIKO_GLSL_IVec4Variable import NodeGWIKO_GLSL_IVec4Variable
+from .NodeGWIKO_TextFileLineIterator import NodeGWIKO_TextFileLineIterator
 
 # A dictionary that contains all nodes you want to export with their names
 # NOTE: names should be globally unique
@@ -27,7 +28,8 @@ NODE_CLASS_MAPPINGS = {
     "NodeGWIKO_GLSL_Vec4Variable":NodeGWIKO_GLSL_Vec4Variable,
     "NodeGWIKO_GLSL_IVec2Variable":NodeGWIKO_GLSL_IVec2Variable,
     "NodeGWIKO_GLSL_IVec3Variable":NodeGWIKO_GLSL_IVec3Variable,
-    "NodeGWIKO_GLSL_IVec4Variable":NodeGWIKO_GLSL_IVec4Variable
+    "NodeGWIKO_GLSL_IVec4Variable":NodeGWIKO_GLSL_IVec4Variable,
+    "NodeGWIKO_TextFileLineIterator":NodeGWIKO_TextFileLineIterator
 }
 
 # A dictionary that contains the friendly/humanly readable titles for the nodes
@@ -44,5 +46,6 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "NodeGWIKO_GLSL_Vec4Variable" : "NodeGWIKO GLSL Vec4Variable",
     "NodeGWIKO_GLSL_IVec2Variable" : "NodeGWIKO GLSL IVec2Variable",
     "NodeGWIKO_GLSL_IVec3Variable" : "NodeGWIKO GLSL IVec3Variable",
-    "NodeGWIKO_GLSL_IVec4Variable" : "NodeGWIKO GLSL IVec4Variable"
+    "NodeGWIKO_GLSL_IVec4Variable" : "NodeGWIKO GLSL IVec4Variable",
+    "NodeGWIKO_TextFileLineIterator" : "NodeGWIKO TextFileLineIterator"
 }
